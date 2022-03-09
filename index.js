@@ -9,7 +9,7 @@ const users = require('./app.js')
 app.use(express.json())
 
 
-app.get('/api/users',(req,res)=>{
+app.get('/',(req,res)=>{
     res.send(users)
     console.log('ok!');
 })
