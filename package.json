@@ -16,5 +16,8 @@
   "keywords": [
     "rest",
     "api"
-  ]
+  ],
+  "dependencies": {
+    "joi": "^17.6.0"
+  }
 }
