@@ -2,10 +2,13 @@
 
 const Joi = require('joi')
 const express = require('express')
+const cors = require('cors')
 const app = express()
 const users = require('./app.js')
 // const testimonials = require('./testimonial.js')
-
+app.use(cors({
+    origin: '*'
+}));
 app.use(express.json())
 
 
