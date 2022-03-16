@@ -7,7 +7,8 @@ const app = express()
 const users = require('./app.js')
 // const testimonials = require('./testimonial.js')
 app.use(cors({
-    origin: '*'
+    origin: '*',
+    methods: ['GET','POST','DELETE','UPDATE','PUT','PATCH']
 }));
 app.use(express.json())
 
