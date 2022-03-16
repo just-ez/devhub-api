@@ -35,7 +35,7 @@ app.get('/api/testimonial/:id',(req,res)=>{
 
 
 
-app.post('/api/user',(req,res)=>{
+app.post('/api/clients',(req,res)=>{
   
     const {error} = validateUser(req.body)
     console.log(error);
@@ -43,10 +43,11 @@ app.post('/api/user',(req,res)=>{
         res.status(400) 
         console.log(`not up to 3!`);
     }
-    const user = {
+    const clients = {
         id: users[0].length + 1,
         name: req.body.name,
-        email: req.body.email
+        email: req.body.email,
+        message: req.body.message
     }
     users[0].push(user)
     res.send(user)
