@@ -13,6 +13,10 @@ app.get('/',(req,res)=>{
     res.send(users)
     console.log('ok!');
 })
+app.get('/api/user',(req,res)=>{
+    res.send(users[0])
+    console.log('ok!');
+})
 
 app.get('/api/user/:id',(req,res)=>{
      const user = users[0].find(c => c.id === parseInt(req.params.id))
@@ -27,7 +31,7 @@ app.get('/api/testimonial/:id',(req,res)=>{
 
 
 
-app.post('/api/users',(req,res)=>{
+app.post('/api/user',(req,res)=>{
   
     const {error} = validateUser(req.body)
     console.log(error);
