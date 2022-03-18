@@ -25,7 +25,7 @@ app.get('/api/user',(req,res)=>{
 app.get('/api/user/:id',(req,res)=>{
      const user = users[0].find(c => c.id === parseInt(req.params.id))
      if(!users) res.status(404).send('user with id not found')
-     res.send(user)
+     res.send(user)    
 })
 app.get('/api/testimonial/:id',(req,res)=>{
      const testimonial = users[1].find(c => c.id === parseInt(req.params.id))
@@ -49,8 +49,8 @@ app.post('/api/clients',(req,res)=>{
         email: req.body.email,
         message: req.body.message
     }
-    users[0].push(user)
-    res.send(user)
+    users[0].push(clients)
+    res.send(clients)
     
 })
 app.post('/api/testimonial',(req,res)=>{
